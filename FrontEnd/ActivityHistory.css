@@ -1,0 +1,147 @@
+.history-page {
+  padding: 30px;
+  min-height: 100vh;
+  background: #f5f7fb;
+}
+
+.history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.history-header h1 {
+  margin: 0;
+  font-size: 30px;
+}
+
+.history-header p {
+  margin-top: 8px;
+  color: #777;
+}
+
+.history-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.history-buttons button {
+  border: none;
+  padding: 11px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.refresh-btn {
+  background: #2563eb;
+  color: white;
+}
+
+.clear-btn {
+  background: #dc2626;
+  color: white;
+}
+
+.history-card {
+  background: white;
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+}
+
+.history-summary {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.history-summary strong {
+  font-size: 28px;
+}
+
+.history-summary span {
+  color: #777;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background: #f3f4f6;
+}
+
+th {
+  text-align: left;
+  padding: 14px;
+  font-size: 13px;
+  color: #555;
+}
+
+td {
+  padding: 14px;
+  border-top: 1px solid #eee;
+  font-size: 13px;
+}
+
+tr:hover {
+  background: #fafafa;
+}
+
+.window-text {
+  display: inline-block;
+  max-width: 300px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.duration {
+  background: #eef2ff;
+  color: #3730a3;
+  padding: 5px 9px;
+  border-radius: 6px;
+}
+
+.loading {
+  background: white;
+  padding: 50px;
+  text-align: center;
+  border-radius: 12px;
+}
+
+.empty-history {
+  background: white;
+  text-align: center;
+  padding: 70px 20px;
+  border-radius: 14px;
+}
+
+.empty-icon {
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
+.empty-history h2 {
+  margin-bottom: 8px;
+}
+
+.empty-history p {
+  color: #777;
+}
+
+.error-box {
+  background: #fee2e2;
+  color: #991b1b;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
