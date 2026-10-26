@@ -1,0 +1,70 @@
+{
+  "name": "focus-sense",
+  "private": true,
+  "version": "1.0.0",
+  "description": "FocusSense - Context-Aware Digital Study Behavior Intelligence",
+  "main": "electron-main.js",
+  "type": "commonjs",
+
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "oxlint",
+    "preview": "vite preview",
+    "electron": "electron electron-main.js",
+    "dist": "npm run build && electron-builder"
+  },
+
+  "dependencies": {
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
+  },
+
+  "devDependencies": {
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.4",
+    "@vitejs/plugin-react": "^6.1.0",
+    "electron": "^44.4.2",
+    "electron-builder": "^26.15.3",
+    "oxlint": "^1.79.0",
+    "vite": "^8.2.2"
+  },
+
+  "build": {
+    "appId": "com.focussense.app",
+    "productName": "FocusSense",
+
+    "directories": {
+      "output": "release"
+    },
+
+    "files": [
+      "dist/**/*",
+      "electron-main.js",
+      "package.json"
+    ],
+
+    "extraResources": [
+      {
+        "from": "../BackEnd/dist/FocusSenseBackend",
+        "to": "backend/FocusSenseBackend"
+      },
+      {
+        "from": "../BackEnd/dist/FocusSenseCollector",
+        "to": "backend/FocusSenseCollector"
+      }
+    ],
+
+    "win": {
+      "target": "nsis"
+    },
+
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "FocusSense"
+    }
+  }
+}
