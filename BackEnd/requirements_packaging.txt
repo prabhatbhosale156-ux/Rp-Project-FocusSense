@@ -1,0 +1,13 @@
+fastapi
+uvicorn[standard]
+pydantic
+pandas
+pymongo
+groq
+psutil
+pywin32
+requests
+numpy
+scikit-learn
+joblib
+pyinstaller
